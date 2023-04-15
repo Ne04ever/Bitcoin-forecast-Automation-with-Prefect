@@ -1,0 +1,67 @@
+###
+### A complete description of a Prefect Deployment for flow 'main-flow'
+###
+name: bitcoin_flow
+description: null
+version: 0bb68f51ba806ba84f6ba2a77214bf2f
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters:
+  path: C:\Users\vasee\Desktop\Automamtion\Data\bitcoin_price.csv
+schedule:
+  interval: 60.0
+  anchor_date: '2023-04-15T10:02:32.542806+00:00'
+  timezone: UTC
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: main-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 58028f7b-f9d5-4569-b0ae-f8e757a3585c
+  _block_document_name: anonymous-43ec5506-2e8f-44c5-818f-31b7afdc8d1d
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: C:\Users\vasee\Desktop\Automamtion
+entrypoint: prefect\flow.py:main_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    tickers:
+      title: tickers
+      default: BTC-USD
+      position: 0
+    period:
+      title: period
+      default: 3h
+      position: 1
+    interval:
+      title: interval
+      default: 5m
+      position: 2
+    data_path:
+      title: data_path
+      default: ./Data/bitcoin_price.csv
+      position: 3
+    forecaste_path:
+      title: forecaste_path
+      default: ./Data/forecast_price.csv
+      position: 4
+  required: null
+  definitions: null
+timestamp: '2023-04-15T10:02:32.542806+00:00'

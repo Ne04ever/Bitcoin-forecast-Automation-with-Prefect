@@ -3,5 +3,5 @@ Automamating bitcoin price prediction with Prefect
 
 * Created an ETL pipeline and Automated it using Prefect
 * Automated Forcasting with FBProphet model
-* Build an Iterval schedule using prefect to automate
+* Build an Interval schedule using prefect to automate
 
